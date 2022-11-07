@@ -4,11 +4,9 @@ class V1::UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    if params[:user_id].present?
-      @users = User.where(user_id: params[:user_id])
-    else
-      @users = User.all
-    end
+
+    @users = User.all
+
     #Searching
     #  if params[:var].present?
     #   @users = @users.where('name LIKE ?', '%' + params[:var] + '%')
