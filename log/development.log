@@ -1,0 +1,1899 @@
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20221101184004)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221101184004"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-11-01 18:40:55.105230"], ["updated_at", "2022-11-01 18:40:55.105230"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameInUser (20221101184249)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221101184249"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameInUser1 (20221101184439)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221101184439"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameInUser2 (20221101184510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "author" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "body" text[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221101184510"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveNameInUser (20221101184739)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar DEFAULT NULL, "author" varchar DEFAULT NULL, "body" text DEFAULT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "ausers" ("id","created_at","updated_at","name","author","body")
+                     SELECT "id","created_at","updated_at","name","author","body" FROM "users"[0m
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar DEFAULT NULL, "body" text DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","created_at","updated_at","name","body")
+                     SELECT "id","created_at","updated_at","name","body" FROM "ausers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar DEFAULT NULL, "body" text DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","created_at","updated_at","name","body")
+                     SELECT "id","created_at","updated_at","name","body" FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","created_at","updated_at","name")
+                     SELECT "id","created_at","updated_at","name" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221101184739"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAgeInUser (20221101184920)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "age" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "hobby" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221101184920"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20221101185059)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "author" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221101185059"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (9.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-01 19:04:36.996079"], ["updated_at", "2022-11-01 19:04:36.996079"], ["name", "Adarsh"], ["age", 23], ["hobby", "Music"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2022-11-02 00:35:13 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/m0400/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/m0400/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.4ms | Allocations: 739)
+Completed 200 OK in 40ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 7192)
+
+
+Started GET "/" for ::1 at 2022-11-02 00:37:12 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-01 19:16:56.138106"], ["updated_at", "2022-11-01 19:16:56.138106"], ["name", "Go"], ["age", 25], ["hobby", "Hike"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2022-11-02 00:47:20 +0530
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/m0400/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/m0400/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.4ms | Allocations: 356)
+Completed 200 OK in 8ms (Views: 7.1ms | Allocations: 1182)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnInArticles (20221101192843)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.2ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221101192843"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (2.2ms)[0m  [1m[32mINSERT INTO "articles" ("name", "author", "body", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Yeezy"], ["author", "Yeezy"], ["body", "lifeofpi"], ["created_at", "2022-11-01 19:45:23.274781"], ["updated_at", "2022-11-01 19:45:23.274781"], ["user_id", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("name", "author", "body", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Beyonce"], ["author", "JayZ"], ["body", "lifeofpie"], ["created_at", "2022-11-01 19:46:01.856963"], ["updated_at", "2022-11-01 19:46:01.856963"], ["user_id", 1]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+Started GET "/users" for ::1 at 2022-11-02 01:16:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users_path" for ::1 at 2022-11-02 01:17:16 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users_path"):
+  
+Started GET "/user_path" for ::1 at 2022-11-02 01:17:25 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/user_path"):
+  
+Started GET "/user" for ::1 at 2022-11-02 01:17:29 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users" for ::1 at 2022-11-02 01:17:33 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Create (1.7ms)[0m  [1m[32mINSERT INTO "articles" ("name", "author", "body", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Montana"], ["author", "Hannah"], ["body", "changed"], ["created_at", "2022-11-01 19:48:47.253316"], ["updated_at", "2022-11-01 19:48:47.253316"], ["user_id", 2]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mArticle Pluck (0.2ms)[0m  [1m[34mSELECT "articles"."id" FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mArticle Pluck (0.2ms)[0m  [1m[34mSELECT "articles"."id" FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users" for ::1 at 2022-11-02 12:10:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users" for ::1 at 2022-11-02 12:12:30 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users" for ::1 at 2022-11-02 12:13:36 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users" for ::1 at 2022-11-02 12:14:22 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users" for ::1 at 2022-11-02 12:15:29 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users" for ::1 at 2022-11-02 12:16:59 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users" for ::1 at 2022-11-02 12:19:11 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users" for ::1 at 2022-11-02 12:21:14 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/v1/users" for ::1 at 2022-11-02 12:22:01 +0530
+Processing by V1::UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 171ms (Views: 70.7ms | ActiveRecord: 15.1ms | Allocations: 21728)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-02 12:22:31 +0530
+Processing by V1::UsersController#index as */*
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 117ms (Views: 59.7ms | ActiveRecord: 3.8ms | Allocations: 4691)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-02 17:45:58 +0530
+Processing by V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 65ms (Views: 25.4ms | ActiveRecord: 1.9ms | Allocations: 4313)
+
+
+Started GET "/v1/articles" for ::1 at 2022-11-02 17:46:07 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/v1/articles"):
+  
+Started GET "/v1/articles" for ::1 at 2022-11-02 17:46:28 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/v1/articles"):
+  
+Started GET "/v1/articles" for ::1 at 2022-11-02 17:46:44 +0530
+  
+ActionController::RoutingError (uninitialized constant V1::ArticlesController
+Did you mean?  AbstractController):
+  
+Started GET "/v1/articles" for ::1 at 2022-11-02 23:59:52 +0530
+  
+ActionController::RoutingError (uninitialized constant V1::ArticlesController
+Did you mean?  AbstractController):
+  
+Started GET "/v1/users" for ::1 at 2022-11-03 00:00:07 +0530
+Processing by V1::UsersController#index as */*
+Completed 200 OK in 24ms (Views: 1.4ms | Allocations: 1916)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-03 00:00:27 +0530
+Processing by V1::UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 79ms (Views: 53.0ms | ActiveRecord: 25.3ms | Allocations: 4734)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-03 00:01:16 +0530
+Processing by V1::UsersController#index as */*
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 31ms (Views: 16.9ms | ActiveRecord: 5.9ms | Allocations: 4712)
+
+
+Started GET "/" for ::1 at 2022-11-03 01:00:19 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/m0400/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/m0400/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.4ms | Allocations: 363)
+Completed 200 OK in 11ms (Views: 6.3ms | Allocations: 1298)
+
+
+Started GET "/v1/articles" for ::1 at 2022-11-03 01:00:25 +0530
+  
+ActionController::RoutingError (uninitialized constant V1::ArticlesController
+Did you mean?  AbstractController):
+  
+Started GET "/v1/users" for ::1 at 2022-11-03 01:00:29 +0530
+Processing by V1::UsersController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 29ms (Views: 12.8ms | ActiveRecord: 3.2ms | Allocations: 4345)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-03 01:06:15 +0530
+  
+SyntaxError (/Users/m0400/Desktop/revision/app/controllers/v1/users_controller.rb:10: syntax error, unexpected ':', expecting `end'
+    status: :ok
+          ^
+):
+  
+app/controllers/v1/users_controller.rb:10: syntax error, unexpected ':', expecting `end'
+app/controllers/v1/users_controller.rb:10: syntax error, unexpected ':', expecting `end'
+app/controllers/v1/users_controller.rb:10: syntax error, unexpected ':', expecting `end'
+Started GET "/v1/users" for ::1 at 2022-11-03 01:06:29 +0530
+Processing by V1::UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 8.4ms | ActiveRecord: 2.0ms | Allocations: 4167)
+
+
+Started GET "/v1/articles" for ::1 at 2022-11-03 01:09:33 +0530
+  
+SyntaxError (/Users/m0400/Desktop/revision/app/controllers/v1/articles_controller.rb:6: syntax error, unexpected ':', expecting `end'
+    status: :ok
+          ^
+):
+  
+app/controllers/v1/articles_controller.rb:6: syntax error, unexpected ':', expecting `end'
+app/controllers/v1/articles_controller.rb:6: syntax error, unexpected ':', expecting `end'
+app/controllers/v1/articles_controller.rb:6: syntax error, unexpected ':', expecting `end'
+Started GET "/v1/articles" for ::1 at 2022-11-03 01:09:44 +0530
+Processing by V1::ArticlesController#index as */*
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 21.7ms | ActiveRecord: 3.2ms | Allocations: 17572)
+
+
+Started GET "/v1/articles" for ::1 at 2022-11-03 01:10:46 +0530
+Processing by V1::ArticlesController#index as */*
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 10.5ms | ActiveRecord: 4.1ms | Allocations: 4712)
+
+
+Started GET "/v1/users/1" for ::1 at 2022-11-03 01:22:20 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 4.8ms | Allocations: 6139)
+
+
+Started GET "/v1/users/1" for ::1 at 2022-11-03 01:22:33 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 4983)
+
+
+Started GET "/v1/users/3" for ::1 at 2022-11-03 01:22:51 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 905)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/3" for ::1 at 2022-11-03 01:23:55 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 17ms (ActiveRecord: 0.9ms | Allocations: 3723)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/3" for ::1 at 2022-11-03 01:23:56 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 885)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/3" for ::1 at 2022-11-03 01:24:42 +0530
+  
+SyntaxError (/Users/m0400/Desktop/revision/app/controllers/v1/users_controller.rb:20: syntax error, unexpected ';', expecting =>
+      status;: :unprocessable_entity
+            ^
+):
+  
+app/controllers/v1/users_controller.rb:20: syntax error, unexpected ';', expecting =>
+app/controllers/v1/users_controller.rb:20: syntax error, unexpected ';', expecting =>
+app/controllers/v1/users_controller.rb:20: syntax error, unexpected ';', expecting =>
+Started GET "/v1/users/3" for ::1 at 2022-11-03 01:24:51 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 21ms (ActiveRecord: 2.1ms | Allocations: 3775)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/3" for ::1 at 2022-11-03 01:25:14 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 12ms (ActiveRecord: 1.3ms | Allocations: 3708)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/2" for ::1 at 2022-11-03 01:28:50 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 2089)
+
+
+Started GET "/v1/users/1" for ::1 at 2022-11-03 01:39:28 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 824)
+
+
+Started GET "/v1/users/1" for ::1 at 2022-11-03 01:39:58 +0530
+  
+SyntaxError (/Users/m0400/Desktop/revision/app/controllers/v1/users_controller.rb:16: syntax error, unexpected ':', expecting `end'
+    status: :ok
+          ^
+):
+  
+app/controllers/v1/users_controller.rb:16: syntax error, unexpected ':', expecting `end'
+app/controllers/v1/users_controller.rb:16: syntax error, unexpected ':', expecting `end'
+app/controllers/v1/users_controller.rb:16: syntax error, unexpected ':', expecting `end'
+Started GET "/v1/users/1" for ::1 at 2022-11-03 01:40:09 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 4929)
+
+
+Started GET "/v1/users/1" for ::1 at 2022-11-03 01:40:19 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 4902)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 01:41:43 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"Adarsh"}
+Completed 404 Not Found in 9ms (ActiveRecord: 0.6ms | Allocations: 2520)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 01:42:18 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"\"Adarsh\""}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 507)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 01:42:21 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"\"Adarsh\""}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 507)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 01:42:30 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"\"Adarsh\""}
+Completed 404 Not Found in 11ms (ActiveRecord: 0.7ms | Allocations: 2527)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 01:42:31 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"\"Adarsh\""}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 507)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 01:42:32 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"\"Adarsh\""}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 507)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 01:42:34 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"\"Adarsh\""}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 507)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/23" for ::1 at 2022-11-03 01:42:37 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 507)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/23" for ::1 at 2022-11-03 01:42:40 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 507)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/23" for ::1 at 2022-11-03 01:42:49 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 16ms (ActiveRecord: 0.9ms | Allocations: 3773)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=23):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/2" for ::1 at 2022-11-03 01:42:52 +0530
+Processing by V1::UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 2085)
+
+
+Started POST "/v1/users." for ::1 at 2022-11-03 02:13:24 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/v1/users."):
+  
+Started POST "/v1/users" for ::1 at 2022-11-03 02:14:21 +0530
+Processing by V1::UsersController#create as */*
+Completed 400 Bad Request in 13ms (Allocations: 2070)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/v1/users_controller.rb:28:in `url_params'
+app/controllers/v1/users_controller.rb:20:in `create'
+Started POST "/v1/users" for ::1 at 2022-11-03 02:19:00 +0530
+Processing by V1::UsersController#create as */*
+Completed 400 Bad Request in 19ms (Allocations: 2054)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/v1/users_controller.rb:28:in `user_params'
+app/controllers/v1/users_controller.rb:20:in `create'
+Started POST "/v1/users" for ::1 at 2022-11-03 02:19:16 +0530
+Processing by V1::UsersController#create as */*
+Completed 400 Bad Request in 1ms (Allocations: 500)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/v1/users_controller.rb:28:in `user_params'
+app/controllers/v1/users_controller.rb:20:in `create'
+Started POST "/v1/users" for ::1 at 2022-11-03 02:20:33 +0530
+Processing by V1::UsersController#create as */*
+Completed 400 Bad Request in 1ms (Allocations: 500)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/v1/users_controller.rb:28:in `user_params'
+app/controllers/v1/users_controller.rb:20:in `create'
+Started POST "/v1/users.json" for ::1 at 2022-11-03 02:20:44 +0530
+Processing by V1::UsersController#create as JSON
+Completed 400 Bad Request in 1ms (Allocations: 501)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/v1/users_controller.rb:28:in `user_params'
+app/controllers/v1/users_controller.rb:20:in `create'
+Started POST "/v1/user" for ::1 at 2022-11-03 02:20:49 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/v1/user"):
+  
+Started POST "/v1/users" for ::1 at 2022-11-03 02:20:53 +0530
+Processing by V1::UsersController#create as */*
+Completed 400 Bad Request in 4ms (Allocations: 500)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/v1/users_controller.rb:28:in `user_params'
+app/controllers/v1/users_controller.rb:20:in `create'
+Started POST "/v1/users" for ::1 at 2022-11-03 02:21:50 +0530
+Processing by V1::UsersController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Allocations: 455)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.4) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.4) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/v1/users" for ::1 at 2022-11-03 02:24:43 +0530
+Processing by V1::UsersController#create as */*
+Completed 400 Bad Request in 18ms (Allocations: 2054)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/v1/users_controller.rb:28:in `user_params'
+app/controllers/v1/users_controller.rb:20:in `create'
+Started POST "/v1/users" for ::1 at 2022-11-03 02:25:50 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::UsersController#create as */*
+Completed 400 Bad Request in 27ms (ActiveRecord: 0.0ms | Allocations: 5544)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/v1/users_controller.rb:28:in `user_params'
+app/controllers/v1/users_controller.rb:20:in `create'
+Started POST "/v1/users" for ::1 at 2022-11-03 02:26:56 +0530
+Processing by V1::UsersController#create as */*
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (5.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:21:in `create'
+Completed 201 Created in 52ms (Views: 0.4ms | ActiveRecord: 7.0ms | Allocations: 21925)
+
+
+Started POST "/v1/users" for ::1 at 2022-11-03 02:27:38 +0530
+Processing by V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "The Weeknd"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 34], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:21:in `create'
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-02 20:57:38.148201"], ["updated_at", "2022-11-02 20:57:38.148201"], ["name", "The Weeknd"], ["age", 34], ["hobby", "Music"]]
+  ↳ app/controllers/v1/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:21:in `create'
+Completed 201 Created in 40ms (Views: 0.4ms | ActiveRecord: 7.1ms | Allocations: 7157)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-03 02:28:17 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 956)
+
+
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+Started GET "/v1/users/1" for ::1 at 2022-11-03 17:16:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 200 OK in 141ms (Views: 43.2ms | ActiveRecord: 2.7ms | Allocations: 20689)
+
+
+Started GET "/v1/users/1/articles" for ::1 at 2022-11-03 17:16:38 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/v1/users/1/articles"):
+  
+Started GET "/v1/users/1/articles" for ::1 at 2022-11-03 17:17:14 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "user_id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 113ms (Views: 94.3ms | ActiveRecord: 6.4ms | Allocations: 15067)
+
+
+Started GET "/v1/users/1/articles/1" for ::1 at 2022-11-03 17:19:37 +0530
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for V1::ArticlesController):
+  
+actionpack (7.0.4) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/v1/users/1/articles/" for ::1 at 2022-11-03 17:19:48 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "user_id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 902)
+
+
+Started GET "/v1/articles" for ::1 at 2022-11-03 17:20:02 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/v1/articles"):
+  
+Started GET "/v1/articles" for ::1 at 2022-11-03 17:20:18 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "article"=>{}}
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 2.9ms | Allocations: 2744)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-03 17:20:33 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 8.3ms | ActiveRecord: 5.5ms | Allocations: 2836)
+
+
+Started GET "/v1/users/1/articles" for ::1 at 2022-11-03 17:22:41 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "user_id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 16.9ms | ActiveRecord: 3.8ms | Allocations: 2742)
+
+
+Started GET "/v1/users/2/articles" for ::1 at 2022-11-03 17:22:51 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "user_id"=>"2", "article"=>{}}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 824)
+
+
+Started GET "/v1/users/2" for ::1 at 2022-11-03 17:25:55 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 25ms (Views: 1.6ms | ActiveRecord: 1.9ms | Allocations: 1429)
+
+
+Started GET "/v1/users/1" for ::1 at 2022-11-03 17:26:00 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 714)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:26:11 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 714)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:26:31 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 714)
+
+
+Started GET "/v1/users?name=Adarsh" for ::1 at 2022-11-03 17:27:05 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "name"=>"Adarsh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.6ms | Allocations: 2384)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Adarsh"], ["LIMIT", 1]]
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:28:21 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 12ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:29:36 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 16ms (Views: 1.5ms | ActiveRecord: 2.1ms | Allocations: 1410)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:30:05 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 7ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 714)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:31:40 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 714)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:33:14 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 20ms (ActiveRecord: 7.7ms | Allocations: 1953)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with [WHERE "users"."name" IS NULL]):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:35:31 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 805)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:35:43 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 190)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:35:53 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL[0m
+  ↳ app/controllers/v1/users_controller.rb:15:in `show'
+Completed 404 Not Found in 8ms (Views: 0.2ms | ActiveRecord: 3.9ms | Allocations: 1342)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:37:38 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:15:in `show'
+Completed 200 OK in 31ms (Views: 1.4ms | ActiveRecord: 10.0ms | Allocations: 3230)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:39:33 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", ""]]
+  ↳ app/controllers/v1/users_controller.rb:15:in `show'
+Completed 404 Not Found in 65ms (Views: 0.4ms | ActiveRecord: 9.6ms | Allocations: 1363)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:40:26 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", ""]]
+  ↳ app/controllers/v1/users_controller.rb:15:in `show'
+Completed 404 Not Found in 3ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 671)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:41:30 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 25ms (Views: 0.6ms | ActiveRecord: 4.6ms | Allocations: 1362)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:41:37 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 592)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:42:18 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 16ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 1410)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:42:22 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 714)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:42:25 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 714)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:44:18 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 16ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 1411)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:45:16 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 14ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 1353)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:45:31 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 582)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:45:35 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 581)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:47:07 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Adarsh"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 200 OK in 36ms (Views: 0.5ms | ActiveRecord: 16.1ms | Allocations: 3038)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:52:21 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+Completed 500 Internal Server Error in 7ms (Allocations: 453)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/v1/users_controller.rb:14:in `+'
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:52:29 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+Completed 500 Internal Server Error in 1ms (Allocations: 471)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/v1/users_controller.rb:14:in `+'
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:56:02 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 36ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 1616)
+
+
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:56:11 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:14:in `show'
+Completed 404 Not Found in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 720)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Adarsh"], ["LIMIT", 1]]
+Started GET "/v1/users/%22Adarsh%22" for ::1 at 2022-11-03 17:57:34 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"\"Adarsh\""}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms | Allocations: 1526)
+
+
+  
+TypeError (can't cast Hash):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-03 17:57:47 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"The Weeknd", "age"=>34, "hobby"=>"Music"}, "id"=>"Adarsh"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 737)
+
+
+  
+TypeError (can't cast Hash):
+  
+app/controllers/v1/users_controller.rb:14:in `show'
+Started GET "/v1/users" for ::1 at 2022-11-03 19:41:19 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Drake", "age"=>37, "hobby"=>"Music"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 3.7ms | Allocations: 2854)
+
+
+Started POST "/v1/users" for ::1 at 2022-11-03 19:41:31 +0530
+Processing by V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Drake", "age"=>37, "hobby"=>"Music"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Drake"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 37], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-03 14:11:31.140469"], ["updated_at", "2022-11-03 14:11:31.140469"], ["name", "Drake"], ["age", 37], ["hobby", "Music"]]
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+Completed 201 Created in 40ms (Views: 3.3ms | ActiveRecord: 5.8ms | Allocations: 4741)
+
+
+Started POST "/v1/users" for ::1 at 2022-11-03 19:42:19 +0530
+Processing by V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Music"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Russ"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 27], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-03 14:12:20.159480"], ["updated_at", "2022-11-03 14:12:20.159480"], ["name", "Russ"], ["age", 27], ["hobby", "Music"]]
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mUser Exists? (8.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Russ"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? AND "users"."id" != ? LIMIT ?[0m  [["age", 27], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+Completed 201 Created in 98ms (Views: 2.3ms | ActiveRecord: 12.5ms | Allocations: 8522)
+
+
+Started DELETE "/v1/users/5" for ::1 at 2022-11-04 00:31:37 +0530
+Processing by V1::UsersController#destroy as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Music"}, "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:47:in `search_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:31:in `destroy'
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/v1/users_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:31:in `destroy'
+Completed 200 OK in 92ms (Views: 1.1ms | ActiveRecord: 18.1ms | Allocations: 4345)
+
+
+Started DELETE "/v1/users/5" for ::1 at 2022-11-04 00:31:44 +0530
+Processing by V1::UsersController#destroy as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Music"}, "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:47:in `search_user'
+Filter chain halted as :search_user rendered or redirected
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 592)
+
+
+Started GET "/v1/users/" for ::1 at 2022-11-04 00:32:45 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Music"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 941)
+
+
+Started POST "/v1/users/" for ::1 at 2022-11-04 00:32:53 +0530
+Processing by V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Music"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Russ"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 27], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-03 19:02:53.922173"], ["updated_at", "2022-11-03 19:02:53.922173"], ["name", "Russ"], ["age", 27], ["hobby", "Music"]]
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:26:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Russ"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:26:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? AND "users"."id" != ? LIMIT ?[0m  [["age", 27], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:26:in `create'
+Completed 201 Created in 33ms (Views: 0.4ms | ActiveRecord: 3.6ms | Allocations: 6305)
+
+
+Started DELETE "/v1/users/5" for ::1 at 2022-11-04 00:33:03 +0530
+Processing by V1::UsersController#destroy as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Music"}, "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:47:in `search_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:31:in `destroy'
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/v1/users_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:31:in `destroy'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 1954)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-04 00:55:18 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Music"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:10:in `index'
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.4ms | Allocations: 2701)
+
+
+Started POST "/v1/users" for ::1 at 2022-11-04 00:55:27 +0530
+Processing by V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Music"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Russ"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 27], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-03 19:25:27.381380"], ["updated_at", "2022-11-03 19:25:27.381380"], ["name", "Russ"], ["age", 27], ["hobby", "Music"]]
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:26:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Russ"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:26:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? AND "users"."id" != ? LIMIT ?[0m  [["age", 27], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:26:in `create'
+Completed 201 Created in 31ms (Views: 0.4ms | ActiveRecord: 6.6ms | Allocations: 6338)
+
+
+Started PUT "/v1/users" for ::1 at 2022-11-04 00:55:43 +0530
+  
+ActionController::RoutingError (No route matches [PUT] "/v1/users"):
+  
+Started PUT "/v1/users/5" for ::1 at 2022-11-04 00:56:32 +0530
+Processing by V1::UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Rapping"}, "id"=>"5"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 977)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/v1/users_controller.rb:31:in `update'
+Started GET "/v1/users/5" for ::1 at 2022-11-04 00:56:43 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Rapping"}, "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:57:in `search_user'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1282)
+
+
+Started PUT "/v1/users/5" for ::1 at 2022-11-04 00:56:50 +0530
+Processing by V1::UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Rapping"}, "id"=>"5"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 937)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/v1/users_controller.rb:31:in `update'
+Started PUT "/v1/users/5" for ::1 at 2022-11-04 00:57:35 +0530
+Processing by V1::UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Rapping"}, "id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:57:in `search_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Russ"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? AND "users"."id" != ? LIMIT ?[0m  [["age", 27], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "hobby" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-11-03 19:27:35.818432"], ["hobby", "Rapping"], ["id", 5]]
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+Completed 200 OK in 69ms (Views: 0.2ms | ActiveRecord: 6.5ms | Allocations: 7177)
+
+
+Started GET "/v1/users/" for ::1 at 2022-11-04 00:57:46 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Rapping"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 978)
+
+
+Started GET "/v1/users/" for ::1 at 2022-11-04 00:58:05 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"Rapping"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:10:in `index'
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 2.8ms | Allocations: 3169)
+
+
+Started PATCH "/v1/users/5" for ::1 at 2022-11-04 01:04:53 +0530
+Processing by V1::UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:57:in `search_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Russ"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? AND "users"."id" != ? LIMIT ?[0m  [["age", 27], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "hobby" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-11-03 19:34:53.720757"], ["hobby", "RappingHard"], ["id", 5]]
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:31:in `update'
+Completed 200 OK in 94ms (Views: 0.6ms | ActiveRecord: 5.5ms | Allocations: 6666)
+
+
+Started PATCH "/v1/users/6" for ::1 at 2022-11-04 01:05:05 +0530
+Processing by V1::UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:57:in `search_user'
+Filter chain halted as :search_user rendered or redirected
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 587)
+
+
+Started PUT "/v1/users/6" for ::1 at 2022-11-04 01:06:20 +0530
+Processing by V1::UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:57:in `search_user'
+Filter chain halted as :search_user rendered or redirected
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 586)
+
+
+Started GET "/v1/users/5/articles" for ::1 at 2022-11-04 01:15:37 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"5", "article"=>{}}
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 3.3ms | Allocations: 918)
+
+
+Started GET "/v1/users/1/articles" for ::1 at 2022-11-04 01:15:45 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 1.0ms | Allocations: 2565)
+
+
+Started GET "/v1/users/1/articles/1" for ::1 at 2022-11-04 01:15:56 +0530
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for V1::ArticlesController):
+  
+actionpack (7.0.4) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/v1/users/1/articles/1" for ::1 at 2022-11-04 01:18:32 +0530
+Processing by V1::ArticlesController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"1", "id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:10:in `show'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 3.5ms | Allocations: 3093)
+
+
+Started GET "/v1/users/1/articles/2" for ::1 at 2022-11-04 01:18:40 +0530
+Processing by V1::ArticlesController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"1", "id"=>"2", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:10:in `show'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 714)
+
+
+Started GET "/v1/users/1/articles/3" for ::1 at 2022-11-04 01:18:44 +0530
+Processing by V1::ArticlesController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"1", "id"=>"3", "article"=>{}}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:10:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 714)
+
+
+Started GET "/v1/users/1/articles" for ::1 at 2022-11-04 01:18:49 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 942)
+
+
+Started GET "/v1/users/2/articles" for ::1 at 2022-11-04 01:18:55 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"2", "article"=>{}}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 824)
+
+
+Started GET "/v1/users/2/articles/1" for ::1 at 2022-11-04 01:19:02 +0530
+Processing by V1::ArticlesController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"2", "id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:10:in `show'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 714)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Henry"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 14], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-03 20:13:13.109025"], ["updated_at", "2022-11-03 20:13:13.109025"], ["name", "Henry"], ["age", 14], ["hobby", "CricKet"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Henry"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 14], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Henry"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 14], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Henry"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 14], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Gandwi"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 14], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Gandwi"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."age" = ? LIMIT ?[0m  [["age", 14], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Gandwi"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-03 20:19:26.569008"], ["updated_at", "2022-11-03 20:19:26.569008"], ["name", "Gandwi"], ["age", 14], ["hobby", "cricket"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/v1/users/articles/1" for ::1 at 2022-11-04 02:11:13 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/v1/users/articles/1"):
+  
+Started GET "/v1/articles/1" for ::1 at 2022-11-04 02:11:26 +0530
+Processing by V1::ArticlesController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (2.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:10:in `show'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 2.8ms | Allocations: 2923)
+
+
+Started GET "/v1/users/?var=A" for ::1 at 2022-11-04 02:22:24 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "var"=>"A"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE ?%A%)[0m
+  ↳ app/controllers/v1/users_controller.rb:14:in `index'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.7ms | Allocations: 2039)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near ")": syntax error):
+  
+app/controllers/v1/users_controller.rb:14:in `index'
+Started GET "/v1/users/?var=A" for ::1 at 2022-11-04 02:28:17 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "var"=>"A"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%A%')[0m
+  ↳ app/controllers/v1/users_controller.rb:14:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 3.3ms | Allocations: 3186)
+
+
+Started GET "/v1/users/?var=a" for ::1 at 2022-11-04 02:28:28 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "var"=>"a"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%a%')[0m
+  ↳ app/controllers/v1/users_controller.rb:14:in `index'
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 927)
+
+
+Started DELETE "/v1/users/7" for ::1 at 2022-11-04 02:28:44 +0530
+Processing by V1::UsersController#destroy as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:61:in `search_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:45:in `destroy'
+  [1m[36mUser Destroy (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/v1/users_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/v1/users_controller.rb:45:in `destroy'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 3.9ms | Allocations: 2593)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-04 02:28:50 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:14:in `index'
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.0ms | Allocations: 1061)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Greg"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "name", "age", "hobby") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2022-11-03 20:59:37.529266"], ["updated_at", "2022-11-03 20:59:37.529266"], ["name", "Greg"], ["age", 14], ["hobby", "cricket"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/v1/users" for ::1 at 2022-11-04 02:29:41 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/v1/users_controller.rb:14:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1086)
+
+
+Started GET "/v1/users?var=a" for ::1 at 2022-11-04 02:30:09 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "var"=>"a"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%a%')[0m
+  ↳ app/controllers/v1/users_controller.rb:14:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 873)
+
+
+Started GET "/v1/users" for ::1 at 2022-11-04 02:58:25 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY  name ASC[0m
+  ↳ app/controllers/v1/users_controller.rb:17:in `index'
+Completed 200 OK in 18ms (Views: 6.4ms | ActiveRecord: 7.4ms | Allocations: 2959)
+
+
+Started GET "/v1/users?method=hobby&sort_by=ASC" for ::1 at 2022-11-04 02:59:09 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "method"=>"hobby", "sort_by"=>"ASC"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY  hobby ASC[0m
+  ↳ app/controllers/v1/users_controller.rb:17:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1130)
+
+
+Started GET "/v1/users?method=hobby&sort_by=DESC" for ::1 at 2022-11-04 02:59:38 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "method"=>"hobby", "sort_by"=>"DESC"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY  hobby DESC[0m
+  ↳ app/controllers/v1/users_controller.rb:17:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1130)
+
+
+Started GET "/v1/users?method=hobby&sort_by=DESC&page=10&per=4" for ::1 at 2022-11-04 03:12:17 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "method"=>"hobby", "sort_by"=>"DESC", "page"=>"10", "per"=>"4"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY  hobby DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 10]]
+  ↳ app/controllers/v1/users_controller.rb:24:in `index'
+Completed 200 OK in 11ms (Views: 2.1ms | ActiveRecord: 2.4ms | Allocations: 1186)
+
+
+Started GET "/v1/users?method=hobby&sort_by=DESC&page=1&per=4" for ::1 at 2022-11-04 03:12:24 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "method"=>"hobby", "sort_by"=>"DESC", "page"=>"1", "per"=>"4"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY  hobby DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 1]]
+  ↳ app/controllers/v1/users_controller.rb:24:in `index'
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.6ms | Allocations: 2411)
+
+
+Started GET "/v1/users?method=hobby&sort_by=DESC&page=2&per=4" for ::1 at 2022-11-04 03:12:31 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "method"=>"hobby", "sort_by"=>"DESC", "page"=>"2", "per"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY  hobby DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 2]]
+  ↳ app/controllers/v1/users_controller.rb:24:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 999)
+
+
+Started GET "/v1/users?method=hobby&sort_by=DESC&page=1&per=4" for ::1 at 2022-11-04 03:15:11 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "method"=>"hobby", "sort_by"=>"DESC", "page"=>"1", "per"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY  hobby DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 1]]
+  ↳ app/controllers/v1/users_controller.rb:27:in `index'
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 2.5ms | Allocations: 3202)
+
+
+Started GET "/v1/users/100/articles" for ::1 at 2022-11-04 03:17:46 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"100", "article"=>{}}
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 100]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.6ms | Allocations: 918)
+
+
+Started GET "/v1/users/1/articles" for ::1 at 2022-11-04 03:17:55 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 1.9ms | Allocations: 2566)
+
+
+Started GET "/v1/users/10/articles" for ::1 at 2022-11-04 03:18:09 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"10", "article"=>{}}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 756)
+
+
+Started GET "/v1/users/10/articles" for ::1 at 2022-11-07 19:01:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"10", "article"=>{}}
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 7.6ms | ActiveRecord: 1.7ms | Allocations: 4620)
+
+
+Started GET "/v1/users/100/articles" for ::1 at 2022-11-07 19:03:09 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"100", "article"=>{}}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 100]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 773)
+
+
+Started GET "/v1/users/100" for ::1 at 2022-11-07 19:03:19 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"100"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 100], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:74:in `search_user'
+Filter chain halted as :search_user rendered or redirected
+Completed 404 Not Found in 36ms (Views: 0.2ms | ActiveRecord: 8.1ms | Allocations: 2080)
+
+
+Started GET "/v1/users/1/articles" for ::1 at 2022-11-07 19:42:52 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (5.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 100ms (Views: 92.0ms | ActiveRecord: 8.1ms | Allocations: 19225)
+
+
+Started GET "/v1/users/1" for ::1 at 2022-11-07 20:15:01 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:78:in `search_user'
+Completed 200 OK in 282ms (Views: 9.3ms | ActiveRecord: 10.2ms | Allocations: 15212)
+
+
+Started GET "/v1/users/adarsh" for ::1 at 2022-11-07 20:15:06 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"adarsh"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:78:in `search_user'
+Filter chain halted as :search_user rendered or redirected
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 586)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-07 20:15:12 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:78:in `search_user'
+Filter chain halted as :search_user rendered or redirected
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 599)
+
+
+Started GET "/v1/users/Adarsh" for ::1 at 2022-11-07 20:29:45 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"Adarsh"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:78:in `search_user'
+Filter chain halted as :search_user rendered or redirected
+Completed 404 Not Found in 72ms (Views: 4.8ms | ActiveRecord: 1.8ms | Allocations: 1544)
+
+
+Started GET "/v1/users/a" for ::1 at 2022-11-07 20:29:52 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"a"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:78:in `search_user'
+Filter chain halted as :search_user rendered or redirected
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 586)
+
+
+Started GET "/v1/users/1" for ::1 at 2022-11-07 20:29:55 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:78:in `search_user'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.7ms | Allocations: 2049)
+
+
+Started GET "/v1/users/1" for ::1 at 2022-11-07 20:31:04 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:77:in `search_user'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 4.8ms | Allocations: 3399)
+
+
+Started GET "/v1/users/a" for ::1 at 2022-11-07 20:31:06 +0530
+Processing by V1::UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "id"=>"a"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/v1/users_controller.rb:77:in `search_user'
+Filter chain halted as :search_user rendered or redirected
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 586)
+
+
+Started GET "/v1/users/?name=a" for ::1 at 2022-11-07 20:52:42 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "name"=>"a"}
+  [1m[36mUser Load (38.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%a%') ORDER BY  name ASC[0m
+  ↳ app/controllers/v1/users_controller.rb:33:in `index'
+Completed 200 OK in 162ms (Views: 108.0ms | ActiveRecord: 39.6ms | Allocations: 2754)
+
+
+Started GET "/v1/users/?name=Adarsh" for ::1 at 2022-11-07 20:52:54 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "name"=>"Adarsh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%Adarsh%') ORDER BY  name ASC[0m
+  ↳ app/controllers/v1/users_controller.rb:33:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 854)
+
+
+Started GET "/v1/users/?name=d" for ::1 at 2022-11-07 20:52:59 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "name"=>"d"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%d%') ORDER BY  name ASC[0m
+  ↳ app/controllers/v1/users_controller.rb:33:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 1.8ms | Allocations: 962)
+
+
+Started GET "/v1/users/?user_id=1" for ::1 at 2022-11-08 00:06:22 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"1"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_id" = ? ORDER BY  name ASC[0m  [["user_id", "1"]]
+  ↳ app/controllers/v1/users_controller.rb:33:in `index'
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 6.4ms | Allocations: 1913)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.user_id):
+  
+app/controllers/v1/users_controller.rb:33:in `index'
+Started GET "/v1/articles/?user_id=1" for ::1 at 2022-11-08 00:07:34 +0530
+Processing by V1::ArticlesController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}, "user_id"=>"1", "article"=>{}}
+  [1m[36mArticle Load (2.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/v1/articles_controller.rb:11:in `index'
+Completed 200 OK in 44ms (Views: 20.6ms | ActiveRecord: 5.5ms | Allocations: 2795)
+
+
+Started GET "/v1/user/" for ::1 at 2022-11-08 00:08:50 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/v1/user"):
+  
+Started GET "/v1/users" for ::1 at 2022-11-08 00:09:31 +0530
+Processing by V1::UsersController#index as */*
+  Parameters: {"user"=>{"name"=>"Russ", "age"=>27, "hobby"=>"RappingHard"}}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY  name ASC[0m
+  ↳ app/controllers/v1/users_controller.rb:33:in `index'
+Completed 200 OK in 20ms (Views: 7.9ms | ActiveRecord: 5.1ms | Allocations: 3167)
+
+
